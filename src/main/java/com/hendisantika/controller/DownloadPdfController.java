@@ -3,6 +3,7 @@ package com.hendisantika.controller;
 import com.hendisantika.service.ExportPdfService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * Created by IntelliJ IDEA.
@@ -19,4 +20,8 @@ public class DownloadPdfController {
     @Autowired
     private ExportPdfService exportPdfService;
 
+    @RequestMapping("/")
+    public String index() {
+        return "index";
+    }
 }
